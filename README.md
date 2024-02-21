@@ -193,6 +193,3 @@ $ az login
 6. DONE
 
 ### Have everyone delete the repo and clone the new one
-
-
-# fresh-install
