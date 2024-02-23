@@ -37,6 +37,7 @@ brew install \
    vlc \ 
    slack \
 ```
+
 ## XCode
 [Download Link](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
 
@@ -193,3 +194,52 @@ $ az login
 6. DONE
 
 ### Have everyone delete the repo and clone the new one
+
+### Rename a Flutter Bundle ID in iOS & Android
+
+#### Andorid
+
+#### Build.gradle files
+
+1. /android/app/build.gradle
+```
+	defaultConfig {
+		applicationID "test.domain.bundle.id"
+	}
+	...
+	buildTypes {
+		release {
+			signingConfig ...	
+		}
+	}
+```
+2. There might be a second gradle file!
+
+
+#### AndroidMaifest.xml files
+
+1. /android/app/src/debug/AndroidManifest.xml
+```
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		package="test.domain.bundle.id">
+```
+2. /andorid/app/src/main/AndroidManifest.xml
+```
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		 package="test.domain.bundle.id">
+```
+3. /android/app/src/profile/AndroidManifest.xml
+```
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		 package="test.domain.bundle.id">
+```
+
+4. (Optional?) /android/app/src/main/kotlin/com/example/todo_app/MainActivity.kt
+```
+package test.domain.bundle.id
+```
+5. (Optional?) There might be a `json_key_file`
+```
+package_name("test.domain.bundle.id")
+```
+
