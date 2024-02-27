@@ -136,6 +136,18 @@ Add this to `Info.plist`
 	flutter doctor
 	```
 
+## Sign Android app
+
+Most sensible systems will do this for you... either in an automated way or very easily with a click of a button.
+Lucky you! You chose to use flutter, so you can do this from scratch for Android devices.
+(FYI XCode does this for you even if using Flutter for an iOS project.)
+
+Let's begin!
+- For reference refer to the [Flutter Docs on Signing Android Apps](https://docs.flutter.dev/deployment/android#create-an-upload-keystore)
+- Also refer to [Generate App Signign Key](https://developer.android.com/studio/publish/app-signing#generate-key) on the Android developer portal.
+
+1. 
+
 ## Deploying a brand new project on azure
 
 1. Create a terraform .env file
@@ -193,11 +205,11 @@ $ az login
 
 6. DONE
 
-### Have everyone delete the repo and clone the new one
+#### Have everyone delete the repo and clone the new one
 
-### Rename a Flutter Bundle ID in iOS & Android
+## Rename a Flutter Bundle ID in iOS & Android
 
-#### Andorid
+### Andorid
 
 #### Build.gradle files
 
